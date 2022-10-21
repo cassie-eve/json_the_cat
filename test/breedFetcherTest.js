@@ -15,4 +15,12 @@ describe('fetchBreedDescription', () => {
       done();
     });
   });
+  it('Returns an error if an invalid breed is passed', (done) => {
+    fetchBreedDescription('siamf', (err, desc) => {
+      assert.equal(err, 'Please enter the name of a real cat breed');
+      assert.equal(desc, null);
+
+      done();
+    });
+  });
 });
