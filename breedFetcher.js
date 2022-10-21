@@ -14,7 +14,7 @@ const fetchBreedDescription = function(breed, callback) {
     } else {
       callback(null, data[0].description);
     }
-  }); 
+  });
 };
 
-module.exports = { fetchBreedDescription }
+module.exports = { fetchBreedDescription };
